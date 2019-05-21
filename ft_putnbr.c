@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 07:53:46 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/05/21 15:39:14 by lkebethi         ###   ########.fr       */
+/*   Created: 2019/05/21 11:35:31 by lkebethi          #+#    #+#             */
+/*   Updated: 2019/05/21 15:39:57 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(int c)
+void	ft_putnbr(int n)
 {
-	if (c >= 'a' && c <= 'z')
-		c -= 32;
-	return (c);
+	if (n == -2147483648)
+		ft_putstr("-2147483648");
+	else if (n < 0)
+	{
+		ft_putchar('-');
+		ft_putnbr(-n);
+	}
+	else if (n > 10)
+	{
+		ft_putchar(n / 10);
+		ft_putchar(n % 10 + '0');
+	}
+	else
+		ft_putchar(n + '0');
 }
