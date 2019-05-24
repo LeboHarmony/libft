@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 10:39:58 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/05/23 07:20:10 by lkebethi         ###   ########.fr       */
+/*   Created: 2019/05/22 12:20:36 by lkebethi          #+#    #+#             */
+/*   Updated: 2019/05/22 12:38:02 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+int		ft_isprint(int c)
 {
-	size_t i;
-
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	return (dst);
+	if (c >= 040 && c <= 176)
+		return (1);
+	else
+		return (0);
 }

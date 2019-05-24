@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 10:39:58 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/05/23 07:20:10 by lkebethi         ###   ########.fr       */
+/*   Created: 2019/05/22 14:04:35 by lkebethi          #+#    #+#             */
+/*   Updated: 2019/05/22 14:23:33 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+int		ft_isalnum(int c)
 {
-	size_t i;
-
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	return (dst);
+	if (c >= 060 && c <= 172)
+		return (1);
+	else
+		return (0);
 }
