@@ -6,7 +6,7 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 11:00:01 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/05/30 08:13:09 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/05/30 14:24:34 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memset(void	*b, int	c, size_t len)
 	return (b);
 }
 
-int		main()
+/*int		main()
 {
 	char str[50] = "WeThinkCode_ is the future of coding in Afrika";
 
@@ -33,4 +33,4 @@ int		main()
 	ft_memset(str + 13, '.', 8*sizeof(char));
 	printf("After memset(): %s", str);
 	return (0);
-}
+}*/
