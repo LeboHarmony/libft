@@ -6,7 +6,7 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 15:51:05 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/05/30 16:45:49 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/05 14:37:21 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int				ft_isdigit(int c);
 int				ft_isprint(int c);
 char			*ft_itoa(int n);
 void			*ft_memalloc(size_t size);
-void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
+void			*ft_memccpy(void *dst, const char *src, int c, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
@@ -63,15 +63,15 @@ size_t			ft_strlen(const char *s);
 char			*ft_strmap(char const *s, char (*f)(char));
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strncat(char *s1, const char *s2, size_t n);
-int				ft_strncmp(const char *s1, const char *src, size_t n);
+int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strncpy(char *dst, const char *src, size_t n);
-int				ft_strequ(char const *s1, char const *s2, size_t n);
+int				ft_strequ(char const *s1, char const *s2);
 char			*ft_strnew(size_t size);
 char			*ft_strnstr(const char *s1, const char *s2, size_t n);
 char			*ft_strrchr(const char *s, int c);
 char			**ft_strsplit(char const *s, char c);
 char			*ft_strstr(const char *s1, const char *s2);
-char			*ft_strsup(char const *s, unsigned int start, size_t len);
+char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strtrim(char const *s);
 int				ft_tolower(int c);
 int				ft_toupper(int c);

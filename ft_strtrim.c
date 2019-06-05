@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/02 11:07:17 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/05 15:03:24 by lkebethi         ###   ########.fr       */
+/*   Created: 2019/06/05 07:41:34 by lkebethi          #+#    #+#             */
+/*   Updated: 2019/06/05 13:48:17 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+char	*ft_strtrim(char const *s)
 {
-	long	res;
-	long	sign;
 	unsigned int	i;
+	unsigned int	j;
+	unsigned int	k;
+	char	*str;
 
-	res = 0;
-	sign = 1;
 	i = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] =='\n' || str[i] == '\r' || 
-			str[i] == '\v' || str[i] == '\f')
+	k = 0;
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;
-	if (str[i] == '-' || str[i] == '+')
+	if (s[i] == '\0')
+		return (ft_strcpy(ft_memalloc(sizeof(char) * 2), ""));
+	j = ft_strlen(s) - 1;
+	while (s[j] == ' ' || s[j] == '\n' || s[j] == '\t')
+		j--;
+	str = (char *)malloc(sizeof(char) * (j - i + 2));
+	if (str == NULL)
+		return (NULL);
+	while (k < j - i + 1)
 	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
+		str[k] = s[i + k];
+		k++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		res = res * 10 + str[i] - '0';
-		i++;
-	}
-	return ((int)(res * sign));
+	str[k] = '\0';
+	return (str);
 }

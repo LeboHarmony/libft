@@ -6,19 +6,20 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/02 14:48:11 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/02 14:51:17 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/05 10:58:08 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+void		ft_strclr(char *s)
 {
 	unsigned int	i;
-	 i = 0;
-	 while (s[i] != '\0')
-	 {
-		 s[i] = '\0';
-		 i++;
-	 }
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		s[i] = '\0';
+		i++;
+	}
 }

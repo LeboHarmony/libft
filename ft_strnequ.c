@@ -6,7 +6,7 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/02 15:39:56 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/02 15:53:56 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/05 15:04:06 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int		ft_strnequ(char const *s1, char const s2, size_t n)
 {
-	return (ft_strncmp(s1, s2, n) ? 0 : 1);
+	return (ft_strncmp(s1, &s2, n) ? 0 : 1);
 }
