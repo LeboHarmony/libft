@@ -6,7 +6,7 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/26 14:11:00 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/05 11:34:12 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/06 17:19:06 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char		*ft_strrchr(const char *s, int c)
 	int		i;
 
 	i = ft_strlen(s);
-	while (s[i] != '\0'))
+	while (s[i] != '\0')
 		i++;
 	while (i >= 0)
 	{
