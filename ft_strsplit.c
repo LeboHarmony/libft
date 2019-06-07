@@ -6,7 +6,7 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 08:03:22 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/05 11:39:26 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/07 16:41:33 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ char		**ft_strsplit(const char *s, char c)
 	i = 0;
 	k = 0;
 	tab = (char **)malloc(sizeof(char *) * (ft_cntwrd(s, c)) + 1);
+	if (!s || !c)
+		return (NULL);
 	if (tab == NULL)
 		return (NULL);
 	while (s[i])
@@ -69,5 +71,6 @@ char		**ft_strsplit(const char *s, char c)
 		}
 	}
 	tab[k] = NULL;
+	free(tab);
 	return (tab);
 }

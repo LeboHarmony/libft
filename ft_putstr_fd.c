@@ -6,7 +6,7 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 08:36:49 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/05 15:01:42 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/07 10:42:37 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ void	ft_putstr_fd(char const *s, int fd)
 	int i;
 
 	i = 0;
+	if (!s || !fd)
+		return ;
 	while (s[i])
 	{
-		write(fd, s, 1);
+		write(fd, s, ft_strlen(s));
 		i++;
 	}
 }

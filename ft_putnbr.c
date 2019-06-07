@@ -6,7 +6,7 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:35:31 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/05/21 15:39:57 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/07 09:24:48 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	ft_putnbr(int n)
 	}
 	else if (n > 10)
 	{
-		ft_putchar(n / 10);
-		ft_putchar(n % 10 + '0');
+		ft_putnbr(n / 10);
+		ft_putchar((n % 10) + '0');
 	}
 	else
 		ft_putchar(n + '0');

@@ -6,7 +6,7 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/02 14:48:11 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/05 10:58:08 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/07 08:04:26 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void		ft_strclr(char *s)
 	unsigned int	i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i] != '\0')
 	{
 		s[i] = '\0';
