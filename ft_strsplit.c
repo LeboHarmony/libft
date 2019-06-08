@@ -6,7 +6,7 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 08:03:22 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/07 16:41:33 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/08 16:07:57 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static char		*ft_strndup(const char *s, size_t n)
 {
 	char	*str;
 
-	str = (char *)malloc(sizeof(char) * n + 1);
+	str = malloc(sizeof(char) * n + 1);
 	if (str == NULL)
 		return (NULL);
 	str = ft_strncpy(str, s, n);
@@ -52,9 +52,9 @@ char		**ft_strsplit(const char *s, char c)
 
 	i = 0;
 	k = 0;
-	tab = (char **)malloc(sizeof(char *) * (ft_cntwrd(s, c)) + 1);
 	if (!s || !c)
 		return (NULL);
+	tab = (char **)malloc(sizeof(char *) * (ft_cntwrd(s, c)) + 1);
 	if (tab == NULL)
 		return (NULL);
 	while (s[i])

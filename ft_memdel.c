@@ -6,7 +6,7 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 14:48:03 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/07 08:03:10 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/08 09:53:11 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,7 @@
 
 void	ft_memdel(void **ap)
 {
-<<<<<<< HEAD
 	if (!ap)
-=======
-	if (*ap == NULL)
->>>>>>> 4e7dbb3e1ae7805f66dcd8f07cedc0b074a980c9
 		return ;
 	free(*ap);
 	*ap = NULL;
