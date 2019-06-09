@@ -6,7 +6,7 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 07:41:34 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/07 08:58:28 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/09 14:35:56 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strtrim(char const *s)
 	unsigned int	i;
 	unsigned int	j;
 	unsigned int	k;
-	char	*str;
+	char			*str;
 
 	i = 0;
 	k = 0;
