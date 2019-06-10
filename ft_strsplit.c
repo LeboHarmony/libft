@@ -6,32 +6,34 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 08:03:22 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/09 14:03:04 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/10 10:30:12 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_cntwrd(char const *s, char c)
+static int			ft_cntwrd(char const *s, char c)
 {
-	unsigned int	i;
-	int				cntr;
+	int		i;
+	int		cntr;
 
 	i = 0;
 	cntr = 0;
-	while (s[i])
+	while (*s != '\0')
 	{
-		while (s[i] == c)
-			i++;
-		if (s[i] != '\0')
+		if (i == 1 && *s == c)
+			i = 0;
+		if (i == 0 && *s != c)
+		{
+			i = 1;
 			cntr++;
-		while (s[i] && (s[i] != c))
-			i++;
+		}
+		s++;
 	}
 	return (cntr);
 }
 
-static int		ft_lenw(const char *s, char c)
+static int			ft_lenw(const char *s, char c)
 {
 	int		len;
 
@@ -44,7 +46,7 @@ static int		ft_lenw(const char *s, char c)
 	return (len);
 }
 
-char		**ft_strsplit(const char *s, char c)
+char				**ft_strsplit(const char *s, char c)
 {
 	int		j;
 	int		i;
@@ -68,6 +70,5 @@ char		**ft_strsplit(const char *s, char c)
 		i++;
 	}
 	tab[i] = NULL;
-	free(tab);
 	return (tab);
 }

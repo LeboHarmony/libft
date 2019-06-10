@@ -6,11 +6,18 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 07:41:34 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/09 14:35:56 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/10 13:39:52 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int		ft_isspc(int c)
+{
+	if (c == ' ' || c == '\n' || c == '\t')
+		return (1);
+	return (0);
+}
 
 char	*ft_strtrim(char const *s)
 {
@@ -23,21 +30,13 @@ char	*ft_strtrim(char const *s)
 	k = 0;
 	if (!s)
 		return (NULL);
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-		i++;
-	if (s[i] == '\0')
-		return (ft_strcpy(ft_memalloc(sizeof(char) * 2), ""));
+	i = 0;
 	j = ft_strlen(s) - 1;
-	while (s[j] == ' ' || s[j] == '\n' || s[j] == '\t')
+	while (i < ft_strlen(s) && ft_isspc(s[i]))
+		i++;
+	while (j > i && ft_isspc(s[j]))
 		j--;
-	str = (char *)malloc(sizeof(char) * (j - i + 2));
-	if (str == NULL)
-		return (NULL);
-	while (k < j - i + 1)
-	{
-		str[k] = s[i + k];
-		k++;
-	}
-	str[k] = '\0';
+	k = j - i + 1;
+	str = ft_strsub(s, i, k);
 	return (str);
 }
