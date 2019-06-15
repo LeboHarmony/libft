@@ -6,7 +6,7 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 07:39:14 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/14 16:21:53 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/15 18:13:45 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -159,7 +159,7 @@ int			main()
 
 // strnew
 
-	char s[10] = "Lebohang";
+//	char s[10] = "Lebohang";
 
 //	printf("%s", ft_strnew(2));	
 
@@ -169,9 +169,35 @@ int			main()
 
 // strclr
 
-	printf("%s\n", ft_strclr(s));
+//	printf("%s\n", ft_strclr(s));
 
+// striter 
 
+//	printf("%s", ft_striter(s, 'i'));
+// strmap
 
+//	char s2[10] = "Harmony";
+
+//	printf("%s", ft_strmap(s, 'i'));
+
+// strequ and strnequ
+
+//	printf("%d", ft_strnequ(s, s2, 3));
+
+// strsub
+
+//	printf("%s", ft_strsub(s, 4, 4));
+
+// strjoin
+
+	
+	char s1[15] = "Stay Hungry\n";
+	char s2[15] = "Stay Foolish";
+	
+	printf("%s", ft_strjoin(s1, s2));
+	
+	
+	
+	
 	return (0);
 }
