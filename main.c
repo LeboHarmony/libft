@@ -6,7 +6,7 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 07:39:14 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/15 18:13:45 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/16 14:18:35 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ int			main()
 
 // bzero
 //	char s1[50] = "WeThinkCode_ is the future of Afrika Tech Ind.";
-	
+
+//	ft_bzero(s1 + 2, 10);
+//	ft_putstr(s1);	
 //	printf("%s", ft_bzero(s1, 12));
 
 // memcpy
@@ -55,6 +57,15 @@ int			main()
 //	printf("After: %d", ft_memcmp(s1, s2, 5));
 
 // memalloc
+//	char *str;
+//	int *i;
+
+//	i = (int *)ft_memalloc(sizeof(int));
+//	*i = 9;
+//	str = (char *)ft_memalloc(20);
+//	str = "wethinkcode";
+//	ft_putstr(str);
+//	ft_putnbr(*i);
 
 //	char *str;
 
@@ -71,11 +82,10 @@ int			main()
 //	ft_putchar(c);
 
 // putstr
-
+//	ft_putchar('\n');
 //	char s[] = "Hello World!";
 
 //	ft_putstr(s);
-//	printf("%s", s);
 
 // putendl
 
@@ -191,13 +201,17 @@ int			main()
 // strjoin
 
 	
-	char s1[15] = "Stay Hungry\n";
-	char s2[15] = "Stay Foolish";
+//	char s1[15] = "Stay Hungry\n";
+//	char s2[15] = "Stay Foolish";
 	
-	printf("%s", ft_strjoin(s1, s2));
+//	printf("%s", ft_strjoin(s1, s2));
 	
+// strsplit	
 	
-	
-	
+//	char s[50] = "coding is life, that's why we do it everyday.";
+
+
+
+
 	return (0);
 }
