@@ -6,37 +6,32 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 07:41:34 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/10 13:39:52 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/16 13:32:57 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_isspc(int c)
+char		*ft_strtrim(const char *s)
 {
-	if (c == ' ' || c == '\n' || c == '\t')
-		return (1);
-	return (0);
-}
+	size_t		start;
+	size_t		len;
+	char		*str;
 
-char	*ft_strtrim(char const *s)
-{
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	k;
-	char			*str;
-
-	i = 0;
-	k = 0;
+	start = 0;
 	if (!s)
 		return (NULL);
-	i = 0;
-	j = ft_strlen(s) - 1;
-	while (i < ft_strlen(s) && ft_isspc(s[i]))
-		i++;
-	while (j > i && ft_isspc(s[j]))
-		j--;
-	k = j - i + 1;
-	str = ft_strsub(s, i, k);
-	return (str);
+	while (((s[start] == ' ') || (s[start] == '\n')
+					|| (s[start] == '\t')) && (s[start] != '\0'))
+		start++;
+	len = ft_strlen(s);
+	while (((s[len - 1] == ' ') || (s[len - 1] == '\n')
+				|| (s[len - 1] == '\t')) && (s[len - 1] != '\0'))
+		len--;
+	if (len < start)
+		len = start;
+	str = ft_strsub(s, start, len - start);
+	if (str)
+		return (str);
+	return (NULL);
 }
