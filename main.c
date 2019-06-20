@@ -6,7 +6,7 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 07:39:14 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/16 14:18:35 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/20 12:15:27 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int			main()
 
 // memcpy
 //	char s1[10] = "Hello";
-//	char s2[10] = "World";
+//	char s2[10] = "Hello";
 //
 //	printf("Before copy: %s", s1);
 //	printf("After copy: %s", ft_memcpy(s1, s2, 5));
@@ -54,7 +54,7 @@ int			main()
 
 // memcmp
 	
-//	printf("After: %d", ft_memcmp(s1, s2, 5));
+//	printf("After: %d", ft_memcmp(s1, s2, 10));
 
 // memalloc
 //	char *str;
@@ -121,7 +121,7 @@ int			main()
 
 // strdup
 
-//	printf("%s", ft_strdup(s));
+// 	printf("%s", ft_strdup(s));
 
 // strcpy
 
@@ -149,7 +149,10 @@ int			main()
 // strchr
 
 //	char s[20] = "Coding is Life";
+//	char *s1;
 
+//	s1 = ft_strchr(s, 'i');
+//	ft_putstr(s1);
 //	printf("%s", ft_strchr(s, 'i'));
 
 // strrchr
@@ -162,11 +165,11 @@ int			main()
 
 // strcmp & strncmp
 
-//	  char s1[10] = "HelloD";
-//	  char s2[10] = "HelloF";
+//    char s1[10] = "cba";
+//    char s2[10] = "abc";
 
-//	  printf("%d", ft_strncmp(s1, s2, 7));
-
+//    printf("%d", ft_strncmp(s1, s2, 2));
+    
 // strnew
 
 //	char s[10] = "Lebohang";
@@ -208,10 +211,16 @@ int			main()
 	
 // strsplit	
 	
-//	char s[50] = "coding is life, that's why we do it everyday.";
+	char *s = "yywethinkcodeylebogangyyhello";
+	char c = 'y';
+	char **tab;
+	int	i = 0;
 
-
-
-
+	tab = ft_strsplit(s, c);
+	while (tab[i])
+	{
+		printf("%s\n", (tab[i]));
+ 		i++;
+ 	 }
 	return (0);
 }
