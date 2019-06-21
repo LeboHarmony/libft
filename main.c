@@ -6,7 +6,7 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 07:39:14 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/20 12:15:27 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/21 17:15:32 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,31 @@ int			main()
 {
 // memset
 //	char s1[50] = "WeThinkCode_ is the future of Afrika Tech Ind.";
-//
-//	printf("%s", ft_memset(s1 + 12, '-', 8));
+
+//	ft_memset(s1 + 12, '-', 8);
+//	ft_putstr(s1);
+
 
 // bzero
 //	char s1[50] = "WeThinkCode_ is the future of Afrika Tech Ind.";
 
-//	ft_bzero(s1 + 2, 10);
+//	ft_bzero(s1 + 12, 10);
 //	ft_putstr(s1);	
 //	printf("%s", ft_bzero(s1, 12));
 
 // memcpy
-//	char s1[10] = "Hello";
-//	char s2[10] = "Hello";
-//
-//	printf("Before copy: %s", s1);
-//	printf("After copy: %s", ft_memcpy(s1, s2, 5));
+//	char s1[] = "Hello.World";
+//	char s2[] = "Hellof";
+
+//	printf("Before copy: %s\n", s1);
+//	printf("After copy: %s", ft_memcpy(s2, s1, 6));
 	
 // memccpy
 //	char s1[10] = "Hello";
 //	char s2[10] = "World";
 
+//	ft_memccpy(s1, s2, 'l', 6);
+//	ft_putstr(s1);
 //	printf("%s", ft_memccpy( s2, s1, 'H', 8));
 
 // memmove
@@ -70,11 +74,18 @@ int			main()
 //	char *str;
 
 //	str = (char *)ft_memalloc(15);
+//	str = "Lebo";
 //	printf("Address is: %s", str);
-
 
 // memdel
 
+//	char *str;
+
+//	str = (char *)ft_memalloc(20);
+//	str = "wethinkcode";
+//	str = (void **)ap
+//	ft_memdel(ap);
+//	ft_putstr(str);
 // putchar
 
 //	char c = 'M';
@@ -96,13 +107,19 @@ int			main()
 
 //	char s1 = 'L';
 
-//	ft_putchar_fd(s1, 1);
+//	ft_putchar_fd(s1, 2);
 
 // putstr_fd
+//	char *s;
 
-//	ft_putstr_fd(str, 1);
+//	s = "Lebo\n";
+//	ft_putstr(s);
+//	ft_putstr_fd(s, 1);
 
 // putendl_fd
+
+//	s = "Lebohang";
+//	ft_putendl(s);
 
 //	ft_putendl_fd(str, 1);
 //	printf("%c", s1);
@@ -117,10 +134,14 @@ int			main()
 
 // strlen
 
+//	char s[] = "Lebohang";
+
+//	ft_putnbr(ft_strlen(s));
 //	printf("Size of string is: %zu", ft_strlen(s));
 
 // strdup
 
+//	ft_putstr(ft_strdup(s));
 // 	printf("%s", ft_strdup(s));
 
 // strcpy
@@ -137,10 +158,10 @@ int			main()
 
 // strcat & strncat
 
-//	const char s1[10] = "Lebohang";
+//	char s1[10] = "Leboha";
 //	const char s2[10] = "ng";
 	
-//	printf("%s", ft_strncat(s1, s2, 1));
+//	printf("%s", ft_strncat(s1, s2, 2));
 	
 // strlcat
 
@@ -161,6 +182,10 @@ int			main()
 
 // strstr & strnstr
 
+	const char s1[] = "Lebohang";
+	const char s2[] = "Lebo";
+
+	ft_putstr(ft_strstr(s1, s2));
 //	printf("%s", ft_strnstr(s1, s2, 8));
 
 // strcmp & strncmp
@@ -211,16 +236,16 @@ int			main()
 	
 // strsplit	
 	
-	char *s = "yywethinkcodeylebogangyyhello";
-	char c = 'y';
-	char **tab;
-	int	i = 0;
+//	char *s = "yywethinkcodeylebogangyyhello";
+//	char c = 'y';
+//	char **tab;
+//	int	i = 0;
 
-	tab = ft_strsplit(s, c);
-	while (tab[i])
-	{
-		printf("%s\n", (tab[i]));
- 		i++;
- 	 }
+//	tab = ft_strsplit(s, c);
+//	while (tab[i])
+//	{
+//		printf("%s\n", (tab[i]));
+// 		i++;
+// 	 }
 	return (0);
 }
