@@ -6,7 +6,7 @@
 /*   By: lkebethi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 07:39:14 by lkebethi          #+#    #+#             */
-/*   Updated: 2019/06/21 17:15:32 by lkebethi         ###   ########.fr       */
+/*   Updated: 2019/06/22 17:49:16 by lkebethi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -182,28 +182,43 @@ int			main()
 
 // strstr & strnstr
 
-	const char s1[] = "Lebohang";
-	const char s2[] = "Lebo";
+//	const char s1[20] = "Hello, how are you?";
+//	const char s2[10] = "yes";
+//	char *res;
 
-	ft_putstr(ft_strstr(s1, s2));
-//	printf("%s", ft_strnstr(s1, s2, 8));
+//	res = ft_strstr(s1, s2);
+//	ft_putstr(res);
+//	printf("%s", res);
 
 // strcmp & strncmp
 
-//    char s1[10] = "cba";
-//    char s2[10] = "abc";
+//    char s1[10] = "Lebof";
+//    char s2[10] = "Lebod";
+//	int res;
 
+//	res = ft_strncmp(s1, s2, 6);
+//	ft_putnbr(res);
 //    printf("%d", ft_strncmp(s1, s2, 2));
     
 // strnew
 
-//	char s[10] = "Lebohang";
+//	char *s = "Lebohang";
+//	char *res;
 
+//	ft_putendl(s);
+//	res = ft_strnew(2);
+//	ft_putstr(res);
 //	printf("%s", ft_strnew(2));	
 
 // strdel
+//	int i;
 
-//	printf("%s", ft_strdel(s));
+//	i = 0;
+//	while (s[i])
+//	{
+//		ft_putchar(ft_strdel(s[i]));
+//		i++;
+//	}
 
 // strclr
 
@@ -211,19 +226,34 @@ int			main()
 
 // striter 
 
+//	char s[] = "Lebohang";
+//	char res;
+
+//	res = ft_striter(s, 'H');
+//	ft_putstr(res);
 //	printf("%s", ft_striter(s, 'i'));
 // strmap
-
 //	char s2[10] = "Harmony";
+//	char c = 'i';
 
-//	printf("%s", ft_strmap(s, 'i'));
+//	printf("%s", ft_strmap(s2, c));
 
 // strequ and strnequ
+//	char s[] = "Lebof";
+//	char s2[] = "Lebof";
+//	char str;
 
-//	printf("%d", ft_strnequ(s, s2, 3));
+//	str = ft_strequ(s, s2);
+//	ft_putnbr(str);
+
+//	printf("%d", ft_strequ(s, s2));
 
 // strsub
+//	char s[50] = "WeThinkCode is the future of Afrika's Tech Ind.";
+//	char *str;
 
+//	str = ft_strsub(s, 0, 25);
+//	ft_putendl(str);
 //	printf("%s", ft_strsub(s, 4, 4));
 
 // strjoin
@@ -231,9 +261,16 @@ int			main()
 	
 //	char s1[15] = "Stay Hungry\n";
 //	char s2[15] = "Stay Foolish";
-	
+
+//	ft_putendl(ft_strjoin(s1, s2));	
 //	printf("%s", ft_strjoin(s1, s2));
-	
+
+// strtrim
+//	char s[50] = "\t\t\t\t\t\t Coding is \t\t\t\tF*ckn\t\t\t fun  ";
+//	char *str;
+		
+//	str = ft_strtrim(s);
+//	ft_putendl(str);
 // strsplit	
 	
 //	char *s = "yywethinkcodeylebogangyyhello";
@@ -247,5 +284,13 @@ int			main()
 //		printf("%s\n", (tab[i]));
 // 		i++;
 // 	 }
+
+// atoi
+	char s[10] = "6";
+//	char *str;
+
+//	str = ft_atoi(s);
+	ft_putnbr(ft_atoi(s));
+
 	return (0);
 }
